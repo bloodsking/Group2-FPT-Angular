@@ -1,6 +1,8 @@
 export class Customer {
   id?: any;
-  firstname?: string;
-  lastname?: string;
-  gender?: boolean;
+  name?: string;
+  phoneNumber?: string;
+  status?: string;
+  createdTime?: Date;
+  updatedTime?: Date;
 }

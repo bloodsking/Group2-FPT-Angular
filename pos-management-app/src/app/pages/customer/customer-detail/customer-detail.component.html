@@ -1,1 +1,19 @@
-<p>customer-detail works!</p>
+<button class="btn-back" (click)="goBack()">Back</button>
+<br><br>
+<div class="customer-container">
+  <div class="customer-detail" *ngIf="customer">
+    <h5>Customer Details: {{ customer.name }}</h5>
+    <br>
+    <p><strong>ID:</strong> {{ customer.id }}</p>
+    <p><strong>Name:</strong> {{ customer.name }}</p>
+    <p><strong>Phone Number:</strong> {{ customer.phoneNumber }}</p>
+    <p><strong>Status:</strong> {{ customer.status }}</p>
+    <p><strong>Created Time: </strong>{{ customer.createdTime }}</p>
+    <p><strong>Updated Time: </strong>{{ customer.updatedTime }}</p>
+  </div>
+
+  <div class="customer-edit">
+    <app-customer-edit [customer]="customer" (customerUpdated)="onCustomerUpdated($event)"></app-customer-edit>
+  </div>
+</div>
+

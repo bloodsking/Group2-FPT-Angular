@@ -1,1 +1,43 @@
-<p>customer-edit works!</p>
+<body>
+  <div *ngIf="customer">
+    <h5>Edit Customer</h5>
+    <br>
+    <form #form="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" [(ngModel)]="customer.name" name="name" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <input
+          type="text"
+          id="phoneNumber"
+          [(ngModel)]="customer.phoneNumber"
+          name="phoneNumber"
+          class="form-control"
+          required
+          pattern="{{phonePattern}}"
+          #phoneNumber="ngModel" />
+        <div class="error-message" *ngIf="phoneNumber.invalid && phoneNumber.touched">
+          <small *ngIf="phoneNumber.errors?.['pattern']">
+            *Phone number must start with +62 and 9 to 13 digits
+          </small>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="status">Status</label>
+        <select id="status" [(ngModel)]="customer.status" name="status" class="form-control" required="">
+          <option value="ACTIVE">ACTIVE</option>
+          <option value="INACTIVE">INACTIVE</option>
+        </select>
+      </div>
+      <button
+        class="btn-update"
+        [disabled]="form.invalid"
+        (click)="updateCustomer(form)">
+        Update
+      </button>
+      <button class="btn-delete" (click)="deleteCustomer()">Delete</button>
+    </form>
+  </div>
+</body>

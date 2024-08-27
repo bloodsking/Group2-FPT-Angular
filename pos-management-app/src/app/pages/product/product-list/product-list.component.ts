@@ -27,7 +27,16 @@ export class ProductListComponent implements OnInit {
     { field: 'id', sortable: true, filter: true },
     { field: 'name', sortable: true, filter: 'agTextColumnFilter' },
     { field: 'price', sortable: true, filter: 'agNumberColumnFilter' },
-    { field: 'status', sortable: true, filter: true },
+    {
+      field: 'status',
+      sortable: true,
+      filter: 'agTextColumnFilter',
+      filterParams: {
+        textCustomComparator: (filter: string, value: string, filterText: string) => {
+          return value === filterText;
+        }
+      }
+     },
     {
       headerName: 'Actions',
       cellRenderer: (params: any) => {
