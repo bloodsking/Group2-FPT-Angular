@@ -1,0 +1,19 @@
+<button class="btn-back" (click)="goBack()">Back</button>
+<br><br>
+<div class="product-container">
+  <div class="product-detail" *ngIf="product">
+    <h5>Product Details: {{ product.name }}</h5>
+    <br>
+    <p><strong>ID:</strong> {{ product.id }}</p>
+    <p><strong>Name:</strong> {{ product.name }}</p>
+    <p><strong>Price:</strong> {{ product.price }}</p>
+    <p><strong>Status:</strong> {{ product.status }}</p>
+    <p><strong>Created Time: </strong>{{ product.createdTime }}</p>
+    <p><strong>Updated Time: </strong>{{ product.updatedTime }}</p>
+  </div>
+
+  <div class="product-edit">
+    <app-product-edit [product]="product" (productUpdated)="onProductUpdated($event)"></app-product-edit>
+  </div>
+</div>
+

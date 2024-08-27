@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "sheren",
+      "password": "123"
+    },
+    {
+      "id": "2",
+      "username": "renata",
+      "password": "abc"
+    }
+  ],
+  "customers": [
+    {
+      "id": "1",
+      "firstname": "Rose",
+      "lastname": "Lee"
+    },
+    {
+      "id": "2",
+      "firstname": "Aley",
+      "lastname": "ZZ"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Black Desk",
+      "price": 1000,
+      "status": "ACTIVE",
+      "createdTime": "2024-08-05 13:54:22.000000",
+      "updatedTime": "2024-08-24 15:09:47.000000"
+    },
+    {
+      "id": "2",
+      "name": "White Chair",
+      "price": 15000,
+      "status": "INACTIVE",
+      "createdTime": "2024-08-05 14:54:22.000000",
+      "updatedTime": "2024-08-05 14:55:22.000000"
+    },
+    {
+      "id": "3",
+      "name": "Blue Shelvers",
+      "price": 20000,
+      "status": "ACTIVE",
+      "createdTime": "2024-08-05 15:54:22.000000",
+      "updatedTime": "2024-08-24 15:25:53.000000"
+    },
+    {
+      "id": "4",
+      "name": "Green Desk",
+      "price": 3000,
+      "status": "INACTIVE",
+      "createdTime": "2024-08-26 02:14:08.000000",
+      "updatedTime": "2024-08-27 09:09:33.000000"
+    }
+  ]
+}
