@@ -36,10 +36,12 @@ export class ProductListComponent implements OnInit {
           <button class="btn-toggle" data-action="toggle">
             ${params.data.status === 'ACTIVE' ? 'Deactivate' : 'Activate'}
           </button>
+          <button class="btn-delete" data-action="delete">Delete</button>
         `;
       },
       sortable: false,
-      filter: false
+      filter: false,
+      width: 200,
     }
   ];
 
@@ -75,6 +77,8 @@ export class ProductListComponent implements OnInit {
       this.editProduct(event.data);
     } else if (action === 'toggle') {
       this.toggleProductStatus(event.data);
+    } else if (action === 'delete') {
+      this.deleteProduct(event.data);
     }
   }
 
@@ -90,6 +94,15 @@ export class ProductListComponent implements OnInit {
     this.productService.update(product.id, updatedProduct).subscribe(() => {
       this.loadProducts();
     });
+  }
+
+  deleteProduct(product: any): void {
+    if (confirm(`Do you want to delete ${product.name}?`)) {
+      this.productService.delete(product.id).subscribe(() => {
+        alert("Product deleted!");
+        this.loadProducts();
+      });
+    }
   }
 
   addProduct(): void {
