@@ -24,6 +24,7 @@ export class ProductEditComponent {
     this.productService.update(this.product.id, this.product).subscribe(updatedProduct => {
       this.productUpdated.emit(updatedProduct);
       alert("Product updated!");
+      this.router.navigate(['/product']);
     });
   }
 
