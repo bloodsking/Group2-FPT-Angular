@@ -166,49 +166,6 @@
       "createdTime": "2024-08-28T05:54:15.000Z",
       "updatedTime": "2024-08-28T05:54:15.000Z",
       "invoiceDate": "2024-08-28"
-    },
-    {
-      "id": "100",
-      "customer": {
-        "id": "1",
-        "name": "Juan Lima",
-        "phoneNumber": "+6283992828680",
-        "status": "ACTIVE"
-      },
-      "products": [
-        {
-          "invoiceId": "100",
-          "name": "Black Desk",
-          "price": 10000,
-          "quantity": 1,
-          "amount": 10000
-        },
-        {
-          "invoiceId": "100",
-          "name": "White Chair",
-          "price": 15000,
-          "quantity": 1,
-          "amount": 15000
-        },
-        {
-          "invoiceId": "100",
-          "name": "Green Desk",
-          "price": 3000,
-          "quantity": 1,
-          "amount": 3000
-        },
-        {
-          "invoiceId": "100",
-          "name": "Blue Shelvers",
-          "price": 20000,
-          "quantity": 1,
-          "amount": 20000
-        }
-      ],
-      "invoiceAmount": 48000,
-      "createdTime": "2024-08-28T05:54:59.000Z",
-      "updatedTime": "2024-08-28T05:54:59.000Z",
-      "invoiceDate": "2024-08-28"
     }
   ]
 }
