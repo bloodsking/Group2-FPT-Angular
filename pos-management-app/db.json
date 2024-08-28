@@ -56,5 +56,48 @@
       "createdTime": "2024-08-26 02:14:08.000000",
       "updatedTime": "2024-08-27 09:09:33.000000"
     }
+  ],
+  "invoices": [
+    {
+      "id": "2",
+      "customer": {
+        "id": "1",
+        "name": "Rose",
+        "phoneNumber": "+628123451231",
+        "status": "ACTIVE"
+      },
+      "products": [
+        {
+          "invoiceId": "2",
+          "name": "Blue Shelvers",
+          "price": 20000,
+          "quantity": 2,
+          "amount": 20000
+        },
+        {
+          "invoiceId": "2",
+          "name": "Green Desk",
+          "price": 3000,
+          "quantity": 4,
+          "amount": 3000
+        }
+      ],
+      "invoiceAmount": 23000,
+      "createdTime": "2024-08-26 02:14:08.000000",
+      "updatedTime": "2024-08-28 02:16:48.000000",
+      "invoiceDate": "2024-08-26 02:14:08.000000"
+    }
+  ],
+  "invoice_products": [
+    {
+      "invoice_id": "1",
+      "customer_id": "1",
+      "amount": 50000,
+      "product_name": "Black Desk",
+      "quantity": 5,
+      "createdTime": "2024-08-26 02:14:08.000000",
+      "updatedTime": "2024-08-27 09:09:33.000000",
+      "id": "6b84"
+    }
   ]
 }

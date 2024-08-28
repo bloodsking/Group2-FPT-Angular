@@ -1,1 +1,28 @@
-<p>invoice-detail works!</p>
+<button class="btn-back" (click)="goBack()">Back</button>
+<br><br>
+<div class="invoice-container">
+  <div class="invoice-detail" *ngIf="invoice">
+    <h5>Product Details: {{ invoice.id }}</h5>
+    <br>
+    <p><strong>Invoice ID:</strong> {{ invoice.id }}</p>
+    <p><strong>Customer ID:</strong> {{ invoice.customer.id }}</p>
+    <p><strong>Customer Name:</strong> {{ invoice.customer.name }}</p>
+    <p><strong>Product List:</strong></p>
+    <ul>
+      <li *ngFor="let product of invoice.products">
+        <p><strong>Product Name:</strong> {{ product.name }}</p>
+        <p><strong>Price:</strong> {{ product.price }}</p>
+        <p><strong>Quantity:</strong> {{ product.quantity }}</p>
+        <p><strong>Amount:</strong> {{ product.amount }}</p>
+      </li>
+    </ul>
+    <p><strong>Invoice Amount:</strong> {{ invoice.invoiceAmount }}</p>
+    <p><strong>Invoice Date: </strong>{{ invoice.invoiceDate }}</p>
+    <p><strong>Created Time: </strong>{{ invoice.createdTime }}</p>
+    <p><strong>Updated Time: </strong>{{ invoice.updatedTime }}</p>
+  </div>
+
+  <div class="invoice-edit">
+    <app-invoice-edit [invoice]="invoice" (invoiceUpdated)="onInvoiceUpdated($event)"></app-invoice-edit>
+  </div>
+</div>

@@ -1,1 +1,20 @@
-<p>invoice-list works!</p>
+<body>
+  <div class="invoice-container">
+    <h5>Invoice List</h5>
+    <button class="btn-add" (click)="addInvoice()">Add Invoice</button>
+  </div>
+
+  <div class="invoice-list-container">
+    <ag-grid-angular
+      class="ag-theme-alpine"
+      style="width: 100%; height: 500px;"
+      [rowData]="rowData"
+      [columnDefs]="colDefs"
+      [defaultColDef]="defaultColDef"
+      (cellClicked)="onCellClicked($event)"
+      [pagination]="true"
+      [paginationPageSize]="paginationPageSize"
+      [paginationPageSizeSelector]="paginationPageSizeSelector">
+    </ag-grid-angular>
+  </div>
+</body>

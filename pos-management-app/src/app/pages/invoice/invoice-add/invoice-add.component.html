@@ -1,1 +1,26 @@
-<p>invoice-add works!</p>
+<mat-card>
+  <h5>Add Invoice</h5>
+  <div class="content">
+    <form [formGroup]="invoiceForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="id">ID:</label>
+        <input id="id" formControlName="id" type="text" />
+      </div>
+
+      <div>
+        <label for="customer_id">Customer ID:</label>
+        <input id="customer_id" formControlName="customer_id" type="text" />
+      </div>
+
+      <div>
+        <label for="invoice_amount">Invoice Amount:</label>
+        <input id="invoice_amount" formControlName="invoice_amount" type="number" />
+      </div>
+
+      <div class="btn">
+        <button class="btn-add" type="submit">Add Product</button>
+        <button class="btn-cancel" type="button" (click)="onCancel()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</mat-card>

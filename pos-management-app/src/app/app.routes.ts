@@ -24,5 +24,11 @@ export const routes: Routes = [
     loadChildren: () =>
         import('./pages/product/product.routes')
             .then(m => m.productRoutes)
+  },
+  {
+    path: RouterConfig.INVOICE.path,
+    loadChildren: () =>
+        import('./pages/invoice/invoice.routes')
+            .then(m => m.invoiceRoutes)
   }
 ];
