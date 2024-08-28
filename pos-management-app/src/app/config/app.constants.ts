@@ -13,6 +13,7 @@ export const RouterConfig = {
   LOGIN: {path: 'login', link: '/login', title: 'Login Page'},
   HOME: {path: '', link: '/'},
   PRODUCT: {path: 'product', link: '/product', title: 'Product Page'},
-  NOT_FOUND: {path: '**', link: null, title: 'Page Not Found'},
-  INVOICE: {path: 'invoice', link: '/invoice', title: 'Invoice Page'}
+  INVOICE: {path: 'invoice', link: '/invoice', title: 'Invoice Page'},
+  CUSTOMER: {path: 'customer', link: '/customer', title: 'Customer Page'},
+  NOT_FOUND: {path: '**', link: null, title: 'Page Not Found'}
 };

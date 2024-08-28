@@ -14,13 +14,27 @@
   "customers": [
     {
       "id": "1",
-      "firstname": "Rose",
-      "lastname": "Lee"
+      "name": "Juan Lima",
+      "phoneNumber": "+6283992828680",
+      "status": "ACTIVE",
+      "createdTime": "2024-08-05 13:54:22.000000",
+      "updatedTime": "2024-08-28 09:55:48.000000"
     },
     {
       "id": "2",
-      "firstname": "Aley",
-      "lastname": "ZZ"
+      "name": "Lisa",
+      "phoneNumber": "+6282633829298",
+      "status": "ACTIVE",
+      "createdTime": "2024-08-05 13:54:22.000000",
+      "updatedTime": "2024-08-27 19:18:14.000000"
+    },
+    {
+      "id": "3",
+      "name": "Luna",
+      "phoneNumber": "+6283928382725",
+      "status": "INACTIVE",
+      "createdTime": "2024-08-27 19:52:55.000000",
+      "updatedTime": "2024-08-27 22:37:50.000000"
     }
   ],
   "products": [
@@ -72,7 +86,7 @@
           "name": "Blue Shelvers",
           "price": 20000,
           "quantity": 2,
-          "amount": 20000
+          "amount": 40000
         },
         {
           "invoiceId": "2",
@@ -82,22 +96,119 @@
           "amount": 3000
         }
       ],
-      "invoiceAmount": 23000,
+      "invoiceAmount": 43000,
       "createdTime": "2024-08-26 02:14:08.000000",
-      "updatedTime": "2024-08-28 02:16:48.000000",
-      "invoiceDate": "2024-08-26 02:14:08.000000"
-    }
-  ],
-  "invoice_products": [
+      "updatedTime": "2024-08-28 13:00:20.000000",
+      "invoiceDate": "2024-08-26"
+    },
     {
-      "invoice_id": "1",
-      "customer_id": "1",
-      "amount": 50000,
-      "product_name": "Black Desk",
-      "quantity": 5,
-      "createdTime": "2024-08-26 02:14:08.000000",
-      "updatedTime": "2024-08-27 09:09:33.000000",
-      "id": "6b84"
+      "id": "10",
+      "customer": {
+        "id": "2",
+        "name": "Lisa",
+        "phoneNumber": "+6282633829298",
+        "status": "ACTIVE"
+      },
+      "products": [
+        {
+          "invoiceId": "10",
+          "name": "Black Desk",
+          "price": 10000,
+          "quantity": 1,
+          "amount": 10000
+        }
+      ],
+      "invoiceAmount": 10000,
+      "createdTime": "2024-08-28 02:14:08.000000",
+      "updatedTime": "2024-08-28 02:14:08.000000",
+      "invoiceDate": "2024-08-28"
+    },
+    {
+      "id": "11",
+      "customer": {
+        "id": "1",
+        "name": "Juan Lima",
+        "phoneNumber": "+6283992828680",
+        "status": "ACTIVE"
+      },
+      "products": [
+        {
+          "invoiceId": "11",
+          "name": "Green Desk",
+          "price": 3000,
+          "quantity": 2,
+          "amount": 3000
+        }
+      ],
+      "invoiceAmount": 3000,
+      "createdTime": "2024-08-28T05:36:48.000Z",
+      "updatedTime": "2024-08-28 12:37:03.000000",
+      "invoiceDate": "2024-08-28"
+    },
+    {
+      "id": "45",
+      "customer": {
+        "id": "1",
+        "name": "Juan Lima",
+        "phoneNumber": "+6283992828680",
+        "status": "ACTIVE"
+      },
+      "products": [
+        {
+          "invoiceId": "45",
+          "name": "Black Desk",
+          "price": 10000,
+          "quantity": 1,
+          "amount": 10000
+        }
+      ],
+      "invoiceAmount": 10000,
+      "createdTime": "2024-08-28T05:54:15.000Z",
+      "updatedTime": "2024-08-28T05:54:15.000Z",
+      "invoiceDate": "2024-08-28"
+    },
+    {
+      "id": "100",
+      "customer": {
+        "id": "1",
+        "name": "Juan Lima",
+        "phoneNumber": "+6283992828680",
+        "status": "ACTIVE"
+      },
+      "products": [
+        {
+          "invoiceId": "100",
+          "name": "Black Desk",
+          "price": 10000,
+          "quantity": 1,
+          "amount": 10000
+        },
+        {
+          "invoiceId": "100",
+          "name": "White Chair",
+          "price": 15000,
+          "quantity": 1,
+          "amount": 15000
+        },
+        {
+          "invoiceId": "100",
+          "name": "Green Desk",
+          "price": 3000,
+          "quantity": 1,
+          "amount": 3000
+        },
+        {
+          "invoiceId": "100",
+          "name": "Blue Shelvers",
+          "price": 20000,
+          "quantity": 1,
+          "amount": 20000
+        }
+      ],
+      "invoiceAmount": 48000,
+      "createdTime": "2024-08-28T05:54:59.000Z",
+      "updatedTime": "2024-08-28T05:54:59.000Z",
+      "invoiceDate": "2024-08-28"
     }
   ]
 }

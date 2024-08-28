@@ -1,1 +1,40 @@
-<p>customer-add works!</p>
+<mat-card>
+  <h5>Add Customer</h5>
+  <div class="content">
+    <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="id">ID:</label>
+        <input id="id" formControlName="id" type="text" />
+      </div>
+
+      <div>
+        <label for="name">Name:</label>
+        <input id="name" formControlName="name" type="text" />
+      </div>
+
+      <div>
+        <label for="phoneNumber">Phone Number:</label>
+        <input id="phoneNumber" formControlName="phoneNumber" type="text" />
+      </div>
+
+      <div>
+        <label for="status">Status:</label>
+        <select id="status" formControlName="status" class="option">
+          <option value="ACTIVE">ACTIVE</option>
+          <option value="INACTIVE">INACTIVE</option>
+        </select>
+      </div>
+
+      <div class="error-message" *ngIf="customerForm.get('phoneNumber')?.invalid && customerForm.get('phoneNumber')?.touched">
+        <small *ngIf="customerForm.get('phoneNumber')?.errors?.['pattern']">
+          *Phone number must start with +62 and 9 to 13 digits
+        </small>
+      </div>
+
+      <div class="btn">
+        <button class="btn-add" type="submit">Add Customer</button>
+        <button class="btn-cancel" type="button" (click)="onCancel()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</mat-card>

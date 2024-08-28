@@ -30,5 +30,11 @@ export const routes: Routes = [
     loadChildren: () =>
         import('./pages/invoice/invoice.routes')
             .then(m => m.invoiceRoutes)
+  },
+  {
+    path: RouterConfig.CUSTOMER.path,
+    loadChildren: () =>
+        import('./pages/customer/customer.routes')
+            .then(m => m.customerRoutes)
   }
 ];

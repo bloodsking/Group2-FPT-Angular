@@ -24,6 +24,22 @@ export class InvoiceEditComponent {
     this.selectedProductIndex = index;
   }
 
+  onQuantityChange(): void {
+    if (this.selectedProductIndex !== null) {
+      const product = this.invoice.products[this.selectedProductIndex];
+      product.amount = product.quantity * product.price;
+      this.updateInvoiceAmount();
+    }
+  }
+
+  updateInvoiceAmount(): void {
+    let totalAmount = 0;
+    this.invoice.products.forEach((product: any) => {
+      totalAmount += product.amount;
+    });
+    this.invoice.invoiceAmount = totalAmount;
+  }
+
   updateInvoice(): void {
     this.invoice.updatedTime = getCurrentTimestamp();
 

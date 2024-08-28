@@ -8,17 +8,35 @@
       </div>
 
       <div>
-        <label for="customer_id">Customer ID:</label>
-        <input id="customer_id" formControlName="customer_id" type="text" />
+        <label for="customer_id">Customer:</label>
+        <select id="customer_id" formControlName="customer_id">
+          <option *ngFor="let customer of customers" [value]="customer.id">{{ customer.name }}</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Products:</label>
+        <div *ngFor="let product of products">
+          <button type="button" (click)="addProduct(product)">{{ product.name }}</button>
+        </div>
+      </div>
+
+      <div *ngFor="let selectedProduct of selectedProducts.controls; let i = index">
+        <ng-container [formGroup]="asFormGroup(selectedProduct)">
+          <label>{{ asFormGroup(selectedProduct).get('product_id')?.value }}</label>
+          <input formControlName="quantity" type="number" />
+          <input formControlName="amount" type="number" [attr.disabled]="true" />
+          <button type="button" (click)="removeProduct(i)">Remove</button>
+        </ng-container>
       </div>
 
       <div>
         <label for="invoice_amount">Invoice Amount:</label>
-        <input id="invoice_amount" formControlName="invoice_amount" type="number" />
+        <input id="invoice_amount" formControlName="invoice_amount" type="number" [attr.disabled]="true" />
       </div>
 
       <div class="btn">
-        <button class="btn-add" type="submit">Add Product</button>
+        <button class="btn-add" type="submit">Add Invoice</button>
         <button class="btn-cancel" type="button" (click)="onCancel()">Cancel</button>
       </div>
     </form>

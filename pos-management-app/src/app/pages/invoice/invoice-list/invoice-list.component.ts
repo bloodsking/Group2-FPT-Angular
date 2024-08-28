@@ -33,6 +33,7 @@ export class InvoiceListComponent {
         return `
           <button class="btn-edit" data-action="edit">Edit</button>
           <button class="btn-delete" data-action="delete">Delete</button>
+          <button class="btn-danger" data-action="pdf">PDF</button>
         `;
       },
       sortable: false,

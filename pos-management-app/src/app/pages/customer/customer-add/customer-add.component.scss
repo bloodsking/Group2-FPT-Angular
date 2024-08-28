@@ -1,0 +1,74 @@
+label {
+  margin-right: 10px;
+  margin-bottom: 25px;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+mat-card {
+  height: 420px;
+}
+
+h5 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.option {
+  font-size: 16px;
+}
+
+.error-message {
+  color: #bb3838;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  margin-left: 8px;
+  margin-bottom: 10px;
+}
+
+.btn-add {
+  background-color: #38bb73;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width:120px;
+    height: 35px;
+    line-height: 26px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.btn-add:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.btn-cancel {
+  background-color: #bb3838;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width:70px;
+    height: 35px;
+    line-height: 26px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+}
+
+.btn-cancel:hover {
+  background-color: #882121;
+  transform: translateY(-2px);
+}
